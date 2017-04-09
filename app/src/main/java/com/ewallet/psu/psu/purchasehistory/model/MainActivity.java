@@ -3,6 +3,7 @@ package com.ewallet.psu.psu.purchasehistory.model;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.ewallet.psu.psu.R;
@@ -16,12 +17,16 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView textView;
+    private Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         textView = (TextView) findViewById(R.id.nameee);
+        btn = (Button) findViewById(R.id.btnGetPlayer);
+
+        btn.setOnClickListener(this);
 
 
 
