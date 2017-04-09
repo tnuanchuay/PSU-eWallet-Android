@@ -2,6 +2,7 @@ package com.ewallet.psu.psu.purchasehistory.model;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -28,16 +29,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn.setOnClickListener(this);
 
-
-
-
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btnGetPlayer) {
             String productId = "11";
-            Call<Pay> call = ProfileManager.getPayApi().getPlayer(productId);
+            Call<Pay> call = ProfileManager.getPayApi().getPlayer();
             call.enqueue(new Callback<Pay>() {
                 @Override
                 public void onResponse(Call<Pay> call, Response<Pay> response) {
@@ -49,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 @Override
                 public void onFailure(Call<Pay> call, Throwable t) {
+                    Log.d("sddfdfd", "onFailure: kkkkk");
 
                 }
             });

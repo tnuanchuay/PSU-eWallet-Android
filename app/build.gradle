@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion '25.0.2'
     defaultConfig {
-        applicationId "com.automate.retrofit101"
+        applicationId "com.ewallet.psu.psu"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1

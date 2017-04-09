@@ -9,5 +9,5 @@ import retrofit2.http.Query;
 public interface PayAPI {
 
     @GET("productPay")
-    Call<Pay> getPlayer(@Query("productId") String productId);
+    Call<Pay> getPlayer();
 }
